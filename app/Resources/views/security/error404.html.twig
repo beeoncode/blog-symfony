@@ -1,0 +1,13 @@
+{% extends '::public.html.twig' %}
+
+{% block title %}Error: {{ status_text }}{% endblock %}
+{% block body %}
+    <div id="error_cont">
+        <div class="error_number_cont">404</div>
+        <div class="error_text_cont">
+            <h3>Oops! You're lost.</h3>
+            <p>{{ status_text }} - The file or page that you are looking for may have been moved or deleted. Please check your spelling!</p>
+            <p><a href="{{ path('login') }}">Return home »</a></p>
+        </div>
+    </div>
+{% endblock %}

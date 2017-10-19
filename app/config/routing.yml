@@ -1,0 +1,25 @@
+#blog:
+#    resource: "@BlogBundle/Resources/config/routing.php"
+#    prefix:   /aaa
+
+#blog:
+#    resource: "@BlogBundle/Resources/config/routing.yml"
+#    prefix:   /post
+
+blog:
+    resource: '@BlogBundle/Controller'
+    type: annotation
+
+
+login:
+    resource: '@AppBundle/Controller'
+    type: annotation
+
+logout:
+    path: logout/
+
+pageNotFound:
+    path:  /{path}
+    defaults: { _controller: AppBundle:Exception:index, path: '' }
+    requirements:
+        path: .*

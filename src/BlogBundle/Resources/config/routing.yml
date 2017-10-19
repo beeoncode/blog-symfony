@@ -1,0 +1,26 @@
+blog_post:
+    resource: "@BlogBundle/Resources/config/routing/post.yml"
+#    prefix:   /
+#post_index:
+#    path:     /
+#    defaults: { _controller: "BlogBundle:Post:index" }
+
+#post_new:
+#    path:     /new
+#    defaults: { _controller: "BlogBundle:Post:new" }
+##    methods:  [GET, POST]
+#
+#    post_show:
+#        path:     /{id}/show
+#        defaults: { _controller: "BlogBundle:Post:show" }
+#        methods:  GET
+#
+#    post_edit:
+#        path:     /{id}/edit
+#        defaults: { _controller: "BlogBundle:Post:edit" }
+##        methods:  [GET, POST]
+#
+#    post_delete:
+#        path:     /{id}/delete
+#        defaults: { _controller: "BlogBundle:Post:delete" }
+##        methods:  DELETE

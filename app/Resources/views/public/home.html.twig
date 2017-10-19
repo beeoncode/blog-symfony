@@ -1,0 +1,25 @@
+{% extends 'public.html.twig' %}
+{% block body %}
+    <section id="hero" class="hero-auto">
+        <div id="page-title" class="wrapper align-center">
+            <h1>Hi there, this is my Blog</em></strong>.</h1>
+        </div> <!-- END #page-title -->
+    </section>
+    <section id="page-body">
+        <div class="wrapper">
+            <div id="blog-grid" class="minimal-list-blog blog-container">
+                {% for post in posts %}
+                    {% if(post.status != 0) %}
+                        <div class="blog-item">
+                            <div class="post-meta"><i class="fa fa-calendar-o"></i> <span class="post-date">{{ post.Date|date ('F j, Y, g:i a')}}</span></div>
+                            <h3 class="post-name"><a  href="{{ path('post_show', { 'id': post.id }) }}" >{{ post.title }}</a></h3>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div> <!-- END #blog-grid -->
+        </div> <!-- END .wrapper -->
+        <div class="navigation text-center">
+            {{ knp_pagination_render(posts) }}
+        </div>
+    </section>
+{% endblock %}

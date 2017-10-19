@@ -1,0 +1,26 @@
+{% extends '::public.html.twig' %}
+
+{% block body %}
+    <section id="hero" class="hero-auto">
+        <div id="page-title" class="wrapper align-center">
+            <h1>Hi there, this is my Blog</em></strong>.</h1>
+        </div> <!-- END #page-title -->
+    </section>
+    <section id="page-body">
+
+        <div class="wrapper">
+
+            <div class="col-md-offset-4 col-md-4">
+                <div id="blog-grid" class="blog-container">
+                    <form action="{{ path('login') }}" method="post">
+                        <h5>{{ error ? error.message : '' }}</h5>
+                        <input type="text" name="_username" value="{{ last_username }}" placeholder="Username">
+                        <input type="password" name="_password" placeholder="Password">
+                        <input type="submit"  value="Login">
+                    </form>
+                </div> <!-- END #blog-grid -->
+            </div>
+        </div> <!-- END .wrapper -->
+
+    </section>
+{% endblock %}

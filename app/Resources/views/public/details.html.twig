@@ -1,0 +1,29 @@
+{% extends 'public.html.twig' %}
+{% block body %}
+<!-- PAGE CONTENT -->
+<div >
+
+    <!-- HERO  -->
+    <section id="hero" class="hero-auto">
+        <div id="page-title" class="post-title wrapper align-center">
+            <div class="post-meta"><span class="post-date">{{ post.Date|date ('F j, Y, g:i a')}}</span></div>
+            <h1 class="post-name">{{ post.title }}</h1>
+            <h3 class="tags">{% if post.tags %}<i class="fa fa-tags"></i>{% endif %}{{ post.tags }}</h3>
+        </div>
+    </section>
+    <!-- HERO -->
+	<!-- PAGEBODY -->
+	<section id="page-body">
+        <div id="blog-single">
+
+
+            <div class="blog-content wrapper-small">
+            	{{ post.text }}
+            </div> <!-- END #blog-single -->
+        </div>
+ 	</section>
+	<!-- PAGEBODY -->
+
+
+</div>
+{% endblock %}
