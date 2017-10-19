@@ -4,7 +4,7 @@
 ## Installing
 
  1. Clone the repository
- 2. Rename 'app/config/parameters.ini.dist' to 'app/config/parameters.ini'
+ 2. Rename 'app/config/parameters.yml.dist' to 'app/config/parameters.yml'
  3. Run composer install
  4. Install the assets with 'php bin/console assets:install web'
  5. Create the database with 'php bin/console doctrine:database:create'
